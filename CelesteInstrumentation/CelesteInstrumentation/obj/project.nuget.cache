@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "yRFFpVPA+58=",
+  "success": true,
+  "projectFilePath": "C:\\Python\\Celeste-Instrumentation-1.1\\CelesteInstrumentation\\CelesteInstrumentation\\CelesteInstrumentation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rokwo\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512",
+    "C:\\Users\\rokwo\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\rokwo\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net45\\1.0.3\\microsoft.netframework.referenceassemblies.net45.1.0.3.nupkg.sha512",
+    "C:\\Users\\rokwo\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

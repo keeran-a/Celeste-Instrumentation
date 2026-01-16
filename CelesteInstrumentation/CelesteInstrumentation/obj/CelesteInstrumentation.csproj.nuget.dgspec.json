@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Python\\Celeste-Instrumentation-1.1\\CelesteInstrumentation\\CelesteInstrumentation\\CelesteInstrumentation.csproj": {}
+  },
+  "projects": {
+    "C:\\Python\\Celeste-Instrumentation-1.1\\CelesteInstrumentation\\CelesteInstrumentation\\CelesteInstrumentation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Python\\Celeste-Instrumentation-1.1\\CelesteInstrumentation\\CelesteInstrumentation\\CelesteInstrumentation.csproj",
+        "projectName": "CelesteInstrumentation",
+        "projectPath": "C:\\Python\\Celeste-Instrumentation-1.1\\CelesteInstrumentation\\CelesteInstrumentation\\CelesteInstrumentation.csproj",
+        "packagesPath": "C:\\Users\\rokwo\\.nuget\\packages\\",
+        "outputPath": "C:\\Python\\Celeste-Instrumentation-1.1\\CelesteInstrumentation\\CelesteInstrumentation\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rokwo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net4.5"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "targetAlias": "net4.5",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net45": {
+          "targetAlias": "net4.5",
+          "dependencies": {
+            "Lib.Harmony": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "System.ValueTuple": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

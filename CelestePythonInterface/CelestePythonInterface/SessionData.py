@@ -46,6 +46,15 @@ class SessionData(Enum):
     SECONDS_ELAPSED = 23
     LEVEL_DIAGONAL_LENGTH = 24
     NUMBER_OF_LEVELS_FINISHED = 25
+    
+    # Extended signals (append-only)
+    PLAYER_X_NORM = 26
+    PLAYER_Y_NORM = 27
+    DASHES_REMAINING = 28
+    ON_WALL_LEFT = 29
+    ON_WALL_RIGHT = 30
+    STATE_ID = 31
+    PROGRESS_RATIO = 32
 
 class Inputs(Enum):
     # Then you'll have have to send back a list of 7 values, which are the following:

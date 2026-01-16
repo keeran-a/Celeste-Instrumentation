@@ -35,6 +35,16 @@ namespace Instrumentation
 					binaryWriter.Write(this.SecondsElapsed);
 					binaryWriter.Write(this.LevelDiagonalLength);
 					binaryWriter.Write((float)this.FinishedLevelsNumber);
+					
+					// Extended signals (append-only; preserves original 26-float layout)
+					binaryWriter.Write(this.PlayerXNorm);
+					binaryWriter.Write(this.PlayerYNorm);
+					binaryWriter.Write(this.DashesRemaining);
+					binaryWriter.Write(this.OnWallLeft);
+					binaryWriter.Write(this.OnWallRight);
+					binaryWriter.Write(this.StateID);
+					binaryWriter.Write(this.ProgressRatio);
+
 					result = memoryStream.ToArray();
 				}
 			}
@@ -66,5 +76,14 @@ namespace Instrumentation
 		public float LevelDiagonalLength; //For normalisation purposes
 
 		public int FinishedLevelsNumber;
+
+		// Extended signals (append-only)
+		public float PlayerXNorm;
+		public float PlayerYNorm;
+		public float DashesRemaining;
+		public float OnWallLeft;
+		public float OnWallRight;
+		public float StateID;
+		public float ProgressRatio;
 	}
 }

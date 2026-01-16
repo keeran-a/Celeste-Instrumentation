@@ -24,6 +24,36 @@ namespace Instrumentation
 			this.PlayerState.DistanceToObjective = Vector2.Distance(this.Player.Position, this.objective);
 			this.PlayerState.AngleToObjective = (this.objective - this.Player.Position).Angle() + (float) Math.PI;
 			this.PlayerState.LevelDiagonalLength = (float)Math.Pow((double)(level.Bounds.Width * level.Bounds.Width + level.Bounds.Height * level.Bounds.Height), 0.5);
+			
+			// Extended signals (append-only)
+			// Normalized position within the current room bounds
+			float w = (float)level.Bounds.Width;
+			float h = (float)level.Bounds.Height;
+			float xNorm = (w > 0f) ? (this.Player.Position.X - level.Bounds.Left) / w : 0f;
+			float yNorm = (h > 0f) ? (this.Player.Position.Y - level.Bounds.Top) / h : 0f;
+			xNorm = Math.Max(0f, Math.Min(1f, xNorm));
+			yNorm = Math.Max(0f, Math.Min(1f, yNorm));
+			this.PlayerState.PlayerXNorm = xNorm;
+			this.PlayerState.PlayerYNorm = yNorm;
+
+			// Dashes remaining (not just can_dash)
+			this.PlayerState.DashesRemaining = (float)this.Player.Dashes;
+
+			// Wall contact (2px probe)
+			Vector2 pos = this.Player.Position;
+			this.PlayerState.OnWallLeft = base.Scene.CollideCheck<Solid>(pos + new Vector2(-2f, 0f)) ? 1f : 0f;
+			this.PlayerState.OnWallRight = base.Scene.CollideCheck<Solid>(pos + new Vector2(2f, 0f)) ? 1f : 0f;
+
+			// Compact movement mode (state machine id)
+			this.PlayerState.StateID = (float)this.Player.StateMachine.State;
+
+			// Progress ratio toward objective (bounded to [0,1])
+			float d0 = this.PlayerState.InitialDistanceToObjective;
+			float d = this.PlayerState.DistanceToObjective;
+			float pr = (d0 > 1e-6f) ? (1f - (d / d0)) : 0f;
+			pr = Math.Max(0f, Math.Min(1f, pr));
+			this.PlayerState.ProgressRatio = pr;
+
 
 			for (int i = 0; i < this.PlayerState.Distances.Length; i++)
 			{
