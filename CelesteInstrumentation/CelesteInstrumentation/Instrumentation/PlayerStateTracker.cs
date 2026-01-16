@@ -25,7 +25,7 @@ namespace Instrumentation
 			this.PlayerState.AngleToObjective = (this.objective - this.Player.Position).Angle() + (float) Math.PI;
 			this.PlayerState.LevelDiagonalLength = (float)Math.Pow((double)(level.Bounds.Width * level.Bounds.Width + level.Bounds.Height * level.Bounds.Height), 0.5);
 			
-			// Extended signals (append-only)
+			// Extended signals
 			// Normalized position within the current room bounds
 			float w = (float)level.Bounds.Width;
 			float h = (float)level.Bounds.Height;
@@ -36,18 +36,18 @@ namespace Instrumentation
 			this.PlayerState.PlayerXNorm = xNorm;
 			this.PlayerState.PlayerYNorm = yNorm;
 
-			// Dashes remaining (not just can_dash)
+			// Dashes remaining
 			this.PlayerState.DashesRemaining = (float)this.Player.Dashes;
 
-			// Wall contact (2px probe)
+			// Wall contact
 			Vector2 pos = this.Player.Position;
 			this.PlayerState.OnWallLeft = base.Scene.CollideCheck<Solid>(pos + new Vector2(-2f, 0f)) ? 1f : 0f;
 			this.PlayerState.OnWallRight = base.Scene.CollideCheck<Solid>(pos + new Vector2(2f, 0f)) ? 1f : 0f;
 
-			// Compact movement mode (state machine id)
+			// Compact movement mode
 			this.PlayerState.StateID = (float)this.Player.StateMachine.State;
 
-			// Progress ratio toward objective (bounded to [0,1])
+			// Progress ratio toward objective
 			float d0 = this.PlayerState.InitialDistanceToObjective;
 			float d = this.PlayerState.DistanceToObjective;
 			float pr = (d0 > 1e-6f) ? (1f - (d / d0)) : 0f;

@@ -36,7 +36,7 @@ namespace Instrumentation
 					binaryWriter.Write(this.LevelDiagonalLength);
 					binaryWriter.Write((float)this.FinishedLevelsNumber);
 					
-					// Extended signals (append-only; preserves original 26-float layout)
+					// Extended signals
 					binaryWriter.Write(this.PlayerXNorm);
 					binaryWriter.Write(this.PlayerYNorm);
 					binaryWriter.Write(this.DashesRemaining);
@@ -73,11 +73,11 @@ namespace Instrumentation
 
 		public float SecondsElapsed;
 
-		public float LevelDiagonalLength; //For normalisation purposes
+		public float LevelDiagonalLength;
 
 		public int FinishedLevelsNumber;
 
-		// Extended signals (append-only)
+		// Extended signals
 		public float PlayerXNorm;
 		public float PlayerYNorm;
 		public float DashesRemaining;
