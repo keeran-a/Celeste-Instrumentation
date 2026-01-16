@@ -1,3 +1,7 @@
+# Fork Changes
+Added some features and fixed abnormal climb/wall jump behavior.
+
+
 # Celeste Instrumentation
 
 This project aims to provide an instrumentation interface for the game Celeste.  
