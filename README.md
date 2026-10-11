@@ -1,4 +1,5 @@
 # Celeste Instrumentation
+Fork of hdrien0's instrumentation made to fix a few physics related issues it had.
 
 This project aims to provide an instrumentation interface for the game Celeste.  
 It was originally created to train AI agents (see Celeste-NEAT).
