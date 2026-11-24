@@ -1,8 +1,7 @@
 # Celeste Instrumentation
 Fork of hdrien0's instrumentation made to fix a few physics related issues it had.
 
-This project aims to provide an instrumentation interface for the game Celeste.  
-It was originally created to train AI agents (see Celeste-NEAT).
+This project aims to provide an instrumentation interface for the game Celeste.
 
 ## Description
 
@@ -88,7 +87,3 @@ If you want to edit and build `CelesteInstrumentation.dll` yourself, you'll need
 * `Microsoft.Xna.Framework`
 * `Microsoft.Xna.Framework.Game`
 * `Microsoft.Xna.Framework.Graphics`
-
-## Contributing
-
-There is a lot of room for improvement, don't hesite to contriibute to this project.
